@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>React Boilerplate</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" /> 
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+    <link rel="stylesheet" type="text/css" href="/static/css/style.css" >
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+    <script>
+      // This sets the API URL so that it can be used by the React app if needed
+      window.API_URL = <%- '"' + API_URL + '"'%>; 
+    </script>
+  </head>
+  <body>
+    <div id="react-app"></div>
+    <script src="/static/js/react-bundle.js"></script>
+  </body>
+</html>
