@@ -17,7 +17,9 @@ Run the sass watch script
   npm run sass-watch
 
 ### Notes
-Note that in development, a hot loader is setup so as you make changes, the javascript will automatically update without you refreshing the page. Pay attention tothe console though as you may need to do a manual refresh on ocassions.
+Note that in development, a hot loader is setup so as you make changes, the javascript will automatically update without you refreshing the page. Pay attention to the console though as you may need to do a manual refresh on ocassions.
+
+Based on the .eslintrc, jsdoc annotation is required for all functions. This is a good thing... Document your code.
 
 ### Requirements
 - Node 4.2 (install with nvm if needed)
