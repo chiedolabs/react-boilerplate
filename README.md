@@ -3,6 +3,9 @@
 ### Setup
 All environment variables can be overriden with a standard .env file if desired.
 
+### Loose coventions
+Eslint should handle the majority of conventions but please also [read this](https://gist.github.com/chiedojohn/50f5cf4e900523e24586)
+
 ### Development
 Install packages
 
