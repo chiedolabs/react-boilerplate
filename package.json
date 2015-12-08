@@ -49,7 +49,7 @@
   },
   "scripts": {
     "build": "NODE_ENV=production webpack -p --config webpack.config.prod.js && gulp build",
-    "start": "node --harmony server.js",
+    "start": "NODE_ENV=development node --harmony server.js",
     "sass-watch": "gulp sass-watch",
     "lint": "eslint src"
   },
