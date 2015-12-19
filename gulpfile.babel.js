@@ -7,7 +7,7 @@ import sourcemaps from 'gulp-sourcemaps';
 
 // Files to fun sass compilation on
 gulp.task('sass', () => {
-  gulp.src('./src/scss/style.scss')
+  gulp.src('./scss/style.scss')
     .pipe(sass().on('error', sass.logError))
     .pipe(minifyCSS({keepBreaks:false}))
     .pipe(sourcemaps.init())
@@ -17,7 +17,7 @@ gulp.task('sass', () => {
 
 gulp.task('sass-watch', () => {
   // Watch all .scss files for changes
-  gulp.watch(['./src/scss/style.scss'], ['sass']);
+  gulp.watch(['./scss/style.scss'], ['sass']);
 });
 
 gulp.task('default', ['sass-watch']);

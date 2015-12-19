@@ -6,7 +6,7 @@ module.exports = {
   devtool: 'cheap-module-eval-source-map',
   entry: [
     'webpack-hot-middleware/client',
-    './src/react/app',
+    './src/app',
   ],
   output: {
     path: path.join(__dirname,'dist', 'static','js'),
@@ -28,26 +28,7 @@ module.exports = {
     loaders: [{
       test: /\.js$/,
       loader: 'babel',
-      include: path.join(__dirname, 'src','react'),
-      query: {
-        'presets': ['react', 'es2015'],
-        'env': {
-          'development': {
-            'plugins': [
-              ['react-transform', {
-                'transforms': [{
-                  'transform': 'react-transform-hmr',
-                  'imports': ['react'],
-                  'locals': ['module'],
-                }, {
-                  'transform': 'react-transform-catch-errors',
-                  'imports': ['react', 'redbox-react'],
-                }],
-              }],
-            ],
-          },
-        },
-      },
+      include: path.join(__dirname, 'src'),
     }],
   },
 };

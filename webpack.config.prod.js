@@ -4,13 +4,20 @@ var webpack = require('webpack');
 
 // In webpack.config.js
 module.exports = {
-  entry: path.resolve(__dirname, 'src', 'react', 'app.js'),
+  devtool: 'source-map',
+  entry: path.resolve(__dirname, 'src', 'app.js'),
   plugins: [
+    new webpack.optimize.OccurenceOrderPlugin(),
     new webpack.DefinePlugin({
       'process.env': {
         'NODE_ENV': JSON.stringify('production'),
       },
       '__DEVTOOLS__': false,
+    }),
+    new webpack.optimize.UglifyJsPlugin({
+      compressor: {
+        warnings: false,
+      },
     }),
   ],
   module: {
@@ -18,9 +25,6 @@ module.exports = {
       {
         test: /\.js$/,
         loader: 'babel',
-        query: {
-          stage: 0,
-        },
       },
     ],
   },
