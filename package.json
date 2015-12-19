@@ -53,7 +53,7 @@
     "sass-watch": "gulp sass-watch",
     "lint": "eslint src"
   },
-  "author": "Chiedo John <chiedo@chie.do> (http://github.com/chiedojohn)",
+  "author": "Chiedo",
   "license": "CC0-1.0",
   "repository": {
     "type": "git",
