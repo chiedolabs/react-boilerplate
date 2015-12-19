@@ -23,6 +23,9 @@ module.exports = {
       },
       '__DEVTOOLS__': true,
     }),
+    new webpack.ProvidePlugin({
+      'fetch': 'imports?this=>global!exports?global.fetch!whatwg-fetch',
+    }),
   ],
   module: {
     loaders: [{
