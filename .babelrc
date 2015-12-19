@@ -3,6 +3,7 @@
   'env': {
     'development': {
       'plugins': [
+        'add-module-exports',
         ['react-transform', {
           'transforms': [{
             'transform': 'react-transform-hmr',
