@@ -3,7 +3,7 @@ var path = require('path');
 var webpack = require('webpack');
 
 module.exports = {
-  devtool: 'eval',
+  devtool: 'cheap-module-eval-source-map',
   entry: [
     'webpack-hot-middleware/client',
     './src/react/app',
@@ -30,18 +30,20 @@ module.exports = {
       loader: 'babel',
       include: path.join(__dirname, 'src','react'),
       query: {
-        plugins: ['react-transform'],
-        extra: {
-          'react-transform': {
-            'transforms': [
-              {
-                'transform': 'react-transform-hmr',
-                'imports': ['react'],
-                'locals': ['module'],
-              }, {
-                'transform': 'react-transform-catch-errors',
-                'imports': ['react', 'redbox-react'],
-              },
+        'presets': ['react', 'es2015'],
+        'env': {
+          'development': {
+            'plugins': [
+              ['react-transform', {
+                'transforms': [{
+                  'transform': 'react-transform-hmr',
+                  'imports': ['react'],
+                  'locals': ['module'],
+                }, {
+                  'transform': 'react-transform-catch-errors',
+                  'imports': ['react', 'redbox-react'],
+                }],
+              }],
             ],
           },
         },
