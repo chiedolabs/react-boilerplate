@@ -6,7 +6,7 @@ let express = require('express');
 
 fs.stat('.env', (err, stat) => {
   if(err === null) {
-    require('dotenv').load();
+    require('dotenv').config({silent: true});
   }
 });
 
