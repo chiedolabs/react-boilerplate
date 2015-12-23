@@ -1,7 +1,4 @@
-# React Boilerplate
-------------------------
-
-![Logo](img/react.png)
+![React Boilerplate](img/react-boilerplate.png)
 
 A production-ready es2015 boilerplate for React projects using Node 4.2.
 
