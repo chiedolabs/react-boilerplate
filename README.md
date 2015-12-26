@@ -24,3 +24,7 @@ A production-ready es2015 boilerplate for React projects using Node 4.2.
 - In development you can override any environment variables in a .env file. See [this](https://github.com/motdotla/dotenv) for details. Make sure you keep .env in your gitignore.
 - In production, you can just set your environment variables as usual.
 - If you set an `API_URL` environment variable, it will be available to your app at `window.API_URL` since we have passed it to index.ejs. This is useful for having different endpoints in production and development.
+
+# Credits
+
+- All of the hot reloading functionality comes from the [React Transform Boilterplate](https://github.com/gaearon/react-transform-boilerplate)
