@@ -1,5 +1,5 @@
 'use strict';
-require('babel-register');
+require('babel-core/register');
 let env  = process.env.NODE_ENV || 'development';
 let fs   = require('fs');
 let path = require('path');
