@@ -33,8 +33,18 @@ app.use('/static', express.static('dist/static'));
 
 app.set('view engine', 'ejs');
 
-// Caching timestamp. This will only be updated when the server is restarted
+// Caching timestamp. This will only be updated when the server is restarted. In the future,
+// we should make this the greater of the last-modified time of the style sheet or react bundle
+// but lazy for now and binding this to when the server is restarted...
 const timestamp = Date.now();
+
+// This allows the client side app to check if the app has been updated and it needs to do a hard
+// refresh
+app.get('/last-updated', (req, res) => {
+  res.setHeader('Cache-Control', 'no-cache');
+
+  res.json({last_updated: timestamp});
+});
 
 app.get('*', (req, res) => {
   // Setting no cache makes sure we always have the latest version of index.ejs that has the updated
