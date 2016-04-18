@@ -33,9 +33,17 @@ app.use('/static', express.static('dist/static'));
 
 app.set('view engine', 'ejs');
 
+// Caching timestamp. This will only be updated when the server is restarted
+const timestamp = Date.now();
+
 app.get('*', (req, res) => {
+  // Setting no cache makes sure we always have the latest version of index.ejs that has the updated
+  // timestamped versions of the css and js files.
+  res.setHeader('Cache-Control', 'no-cache');
+
   res.render(path.join(__dirname, 'index.ejs'), {
     API_URL: process.env.API_URL || 'http://localhost:8000',
+    timestamp: timestamp,
   });
 });
 
