@@ -10,7 +10,7 @@ A production-ready es2015 boilerplate for React projects using Node 4.2.
 
 3. Run the sass watch script with `npm run sass-watch` in another terminal window.
 
-4. Visit your site at http://localhost:4001. If you see "Hello World", you know your swagging.
+4. Visit your site at http://localhost:4001. If you see "Hello World", you know you're swagging.
 
 ## Deploying for production
 
