@@ -2,6 +2,8 @@
 
 A production-ready es2015 boilerplate for React projects using Node 4.2.
 
+Not sure this needs to exist anymore. In favor of [this](https://github.com/facebookincubator/create-react-app)
+
 ## Getting Started
 
 1. Install your packages with `npm install`
